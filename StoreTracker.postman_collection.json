@@ -1,0 +1,386 @@
+{
+	"info": {
+		"_postman_id": "8558c842-7559-4626-9c41-84ce29a08000",
+		"name": "StoreTracker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "saveBeaconData-Local",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"distance\": 0.01,\n  \"distanceUnit\": \"meters\",\n  \"handshakeTimeNano\": 2990433720495,\n  \"major\": 16808,\n  \"minor\": 19400,\n  \"power\": -59,\n  \"proximity\": \"IMMEDIATE\",\n  \"proximityUUID\": \"94e3aa37-f2e4-459e-b5dc-76ab97ec3939\",\n  \"rssi\": -32,\n  \"scanDateTimeStamp\": \"Sep 18, 2019 5:38:45 PM\",\n  \"scanTimeInMillis\": 1568808525244,\n  \"type\": \"iBeacon\",\n  \"userId\": \"admin\"\n}"
+				},
+				"url": {
+					"raw": "localhost:5000/sat/api//saveBeaconData",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"sat",
+						"api",
+						"",
+						"saveBeaconData"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "localhost:8080/store-tracker/saveBeaconData",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"distance\": 0.01,\n    \"distanceUnit\": \"meters\",\n    \"handshakeTimeNano\": 2990433720495,\n    \"major\": 16808,\n    \"minor\": 19400,\n    \"power\": -59,\n    \"proximity\": \"IMMEDIATE\",\n    \"proximityUUID\": \"94e3aa37-f2e4-459e-b5dc-76ab97ec3939\",\n    \"rssi\": -32,\n    \"scanDateTimeStamp\": \"Sep 18, 2019 5:38:45 PM\",\n    \"scanTimeInMillis\": 1568808525244,\n    \"type\": \"iBeacon\",\n    \"userId\": \"admin\"\n}"
+						},
+						"url": {
+							"raw": "localhost:5000/sat/api//saveBeaconData",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"sat",
+								"api",
+								"",
+								"saveBeaconData"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 18 Sep 2019 12:11:21 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 1,\n    \"message\": \"Data saved successfully.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "getAllBeaconData-Local",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:5000/sat/api/getBeaconData",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"sat",
+						"api",
+						"getBeaconData"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "getAllBeaconData",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:5000/sat/api/getBeaconData",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"sat",
+								"api",
+								"getBeaconData"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 18 Sep 2019 12:13:24 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"major\": 16808,\n        \"minor\": 19400,\n        \"power\": 0,\n        \"rssi\": -50,\n        \"proximityUUID\": \"00c1e24e-fe1b-475c-b4ba-a3eda2feeb1b\",\n        \"distanceUnit\": \"meters\",\n        \"distance\": 0.2,\n        \"proximity\": \"IMMEDIATE\",\n        \"scanDateTimeStamp\": \"Sep 18, 2019 3:22:11 PM\",\n        \"scanTimeInMillis\": 1568800331054,\n        \"handshakeTimeNano\": 2212684029021,\n        \"userId\": \"admin\",\n        \"type\": null\n    },\n    {\n        \"major\": 16808,\n        \"minor\": 19400,\n        \"power\": -59,\n        \"rssi\": -32,\n        \"proximityUUID\": \"94e3aa37-f2e4-459e-b5dc-76ab97ec3939\",\n        \"distanceUnit\": \"meters\",\n        \"distance\": 0.01,\n        \"proximity\": \"IMMEDIATE\",\n        \"scanDateTimeStamp\": \"Sep 18, 2019 5:38:45 PM\",\n        \"scanTimeInMillis\": 1568808525244,\n        \"handshakeTimeNano\": 2990433720495,\n        \"userId\": \"admin\",\n        \"type\": \"iBeacon\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "healthCheck-Local",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/sat/api/actuator/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"sat",
+						"api",
+						"actuator",
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllBeaconData-AWSRemote",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://store-associate-tracking.ap-south-1.elasticbeanstalk.com/sat/api/getBeaconData",
+					"protocol": "http",
+					"host": [
+						"store-associate-tracking",
+						"ap-south-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"sat",
+						"api",
+						"getBeaconData"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "getAllBeaconData",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:5000/sat/api/getBeaconData",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"sat",
+								"api",
+								"getBeaconData"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 18 Sep 2019 12:13:24 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"major\": 16808,\n        \"minor\": 19400,\n        \"power\": 0,\n        \"rssi\": -50,\n        \"proximityUUID\": \"00c1e24e-fe1b-475c-b4ba-a3eda2feeb1b\",\n        \"distanceUnit\": \"meters\",\n        \"distance\": 0.2,\n        \"proximity\": \"IMMEDIATE\",\n        \"scanDateTimeStamp\": \"Sep 18, 2019 3:22:11 PM\",\n        \"scanTimeInMillis\": 1568800331054,\n        \"handshakeTimeNano\": 2212684029021,\n        \"userId\": \"admin\",\n        \"type\": null\n    },\n    {\n        \"major\": 16808,\n        \"minor\": 19400,\n        \"power\": -59,\n        \"rssi\": -32,\n        \"proximityUUID\": \"94e3aa37-f2e4-459e-b5dc-76ab97ec3939\",\n        \"distanceUnit\": \"meters\",\n        \"distance\": 0.01,\n        \"proximity\": \"IMMEDIATE\",\n        \"scanDateTimeStamp\": \"Sep 18, 2019 5:38:45 PM\",\n        \"scanTimeInMillis\": 1568808525244,\n        \"handshakeTimeNano\": 2990433720495,\n        \"userId\": \"admin\",\n        \"type\": \"iBeacon\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "saveBeaconData-AWSRemote",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"distance\": 0.01,\n  \"distanceUnit\": \"meters\",\n  \"handshakeTimeNano\": 2990433720495,\n  \"major\": 16808,\n  \"minor\": 19400,\n  \"power\": -59,\n  \"proximity\": \"IMMEDIATE\",\n  \"proximityUUID\": \"94e3aa37-f2e4-459e-b5dc-76ab97ec3939\",\n  \"rssi\": -32,\n  \"scanDateTimeStamp\": \"Sep 18, 2019 5:38:45 PM\",\n  \"scanTimeInMillis\": 1568808525244,\n  \"type\": \"iBeacon\",\n  \"userId\": \"admin\"\n}"
+				},
+				"url": {
+					"raw": "http://store-associate-tracking.ap-south-1.elasticbeanstalk.com/sat/api/saveBeaconData",
+					"protocol": "http",
+					"host": [
+						"store-associate-tracking",
+						"ap-south-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"sat",
+						"api",
+						"saveBeaconData"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "saveBeaconData-AWSRemote",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"distance\": 0.01,\n    \"distanceUnit\": \"meters\",\n    \"handshakeTimeNano\": 2990433720495,\n    \"major\": 16808,\n    \"minor\": 19400,\n    \"power\": -59,\n    \"proximity\": \"IMMEDIATE\",\n    \"proximityUUID\": \"94e3aa37-f2e4-459e-b5dc-76ab97ec3939\",\n    \"rssi\": -32,\n    \"scanDateTimeStamp\": \"Sep 18, 2019 5:38:45 PM\",\n    \"scanTimeInMillis\": 1568808525244,\n    \"type\": \"iBeacon\",\n    \"userId\": \"admin\"\n}"
+						},
+						"url": {
+							"raw": "http://store-associate-tracking.ap-south-1.elasticbeanstalk.com/sat/api/saveBeaconData",
+							"protocol": "http",
+							"host": [
+								"store-associate-tracking",
+								"ap-south-1",
+								"elasticbeanstalk",
+								"com"
+							],
+							"path": [
+								"sat",
+								"api",
+								"saveBeaconData"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 18 Sep 2019 12:12:38 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "nginx/1.14.1"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 1,\n    \"message\": \"Data saved successfully.\"\n}"
+				}
+			]
+		}
+	]
+}
