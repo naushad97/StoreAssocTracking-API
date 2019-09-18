@@ -1,37 +1,23 @@
 package com.store.tracker.serviceapi;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-
 import java.io.Serializable;
 import java.util.Date;
-import java.util.UUID;
 
 public class BeaconData implements Serializable {
 
-    private String proximityUUID;
-    private String userId;
     private int major;
     private int minor;
     private int power;
     private int rssi;
+    private String proximityUUID;
+    private String distanceUnit;
     private double distance;
-    private String scanTimeStamp;
-
-    public String getProximityUUID() {
-        return proximityUUID;
-    }
-
-    public void setProximityUUID(String proximityUUID) {
-        this.proximityUUID = proximityUUID;
-    }
-
-    public String getUserId() {
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
+    private String proximity;
+    private String scanDateTimeStamp;
+    private long scanTimeInMillis;
+    private long handshakeTimeNano;
+    private String userId;
+    private String type;
 
     public int getMajor() {
         return major;
@@ -65,6 +51,22 @@ public class BeaconData implements Serializable {
         this.rssi = rssi;
     }
 
+    public String getProximityUUID() {
+        return proximityUUID;
+    }
+
+    public void setProximityUUID(String proximityUUID) {
+        this.proximityUUID = proximityUUID;
+    }
+
+    public String getDistanceUnit() {
+        return distanceUnit;
+    }
+
+    public void setDistanceUnit(String distanceUnit) {
+        this.distanceUnit = distanceUnit;
+    }
+
     public double getDistance() {
         return distance;
     }
@@ -73,11 +75,51 @@ public class BeaconData implements Serializable {
         this.distance = distance;
     }
 
-    public String getScanTimeStamp() {
-        return scanTimeStamp;
+    public String getProximity() {
+        return proximity;
     }
 
-    public void setScanTimeStamp(String scanTimeStamp) {
-        this.scanTimeStamp = scanTimeStamp;
+    public void setProximity(String proximity) {
+        this.proximity = proximity;
+    }
+
+    public String getScanDateTimeStamp() {
+        return scanDateTimeStamp;
+    }
+
+    public void setScanDateTimeStamp(String scanDateTimeStamp) {
+        this.scanDateTimeStamp = scanDateTimeStamp;
+    }
+
+    public long getScanTimeInMillis() {
+        return scanTimeInMillis;
+    }
+
+    public void setScanTimeInMillis(long scanTimeInMillis) {
+        this.scanTimeInMillis = scanTimeInMillis;
+    }
+
+    public long getHandshakeTimeNano() {
+        return handshakeTimeNano;
+    }
+
+    public void setHandshakeTimeNano(long handshakeTimeNano) {
+        this.handshakeTimeNano = handshakeTimeNano;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }
