@@ -1,6 +1,9 @@
-package com.store.tracker.serviceapi;
+package com.store.associate.tracking.model;
 
-public class BaseResponse {
+import java.io.Serializable;
+import java.util.StringJoiner;
+
+public class BaseResponse implements Serializable {
     private int status;
     private String message;
 
@@ -25,4 +28,11 @@ public class BaseResponse {
         this.message = message;
     }
 
+    @Override
+    public String toString() {
+        return new StringJoiner(", ", BaseResponse.class.getSimpleName() + "[", "]")
+                .add("status=" + status)
+                .add("message='" + message + "'")
+                .toString();
+    }
 }

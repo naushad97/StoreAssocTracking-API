@@ -1,7 +1,7 @@
-package com.store.tracker.serviceapi;
+package com.store.associate.tracking.model;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.util.StringJoiner;
 
 public class BeaconData implements Serializable {
 
@@ -15,7 +15,7 @@ public class BeaconData implements Serializable {
     private String proximity;
     private String scanDateTimeStamp;
     private long scanTimeInMillis;
-    private long handshakeTimeNano;
+    private long handshakeTimeInNano;
     private String userId;
     private String type;
 
@@ -99,12 +99,12 @@ public class BeaconData implements Serializable {
         this.scanTimeInMillis = scanTimeInMillis;
     }
 
-    public long getHandshakeTimeNano() {
-        return handshakeTimeNano;
+    public long getHandshakeTimeInNano() {
+        return handshakeTimeInNano;
     }
 
-    public void setHandshakeTimeNano(long handshakeTimeNano) {
-        this.handshakeTimeNano = handshakeTimeNano;
+    public void setHandshakeTimeInNano(long handshakeTimeInNano) {
+        this.handshakeTimeInNano = handshakeTimeInNano;
     }
 
     public String getUserId() {
@@ -121,5 +121,24 @@ public class BeaconData implements Serializable {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    @Override
+    public String toString() {
+        return new StringJoiner(", ", BeaconData.class.getSimpleName() + "[", "]")
+                .add("major=" + major)
+                .add("minor=" + minor)
+                .add("power=" + power)
+                .add("rssi=" + rssi)
+                .add("proximityUUID='" + proximityUUID + "'")
+                .add("distanceUnit='" + distanceUnit + "'")
+                .add("distance=" + distance)
+                .add("proximity='" + proximity + "'")
+                .add("scanDateTimeStamp='" + scanDateTimeStamp + "'")
+                .add("scanTimeInMillis=" + scanTimeInMillis)
+                .add("handshakeTimeInNano=" + handshakeTimeInNano)
+                .add("userId='" + userId + "'")
+                .add("type='" + type + "'")
+                .toString();
     }
 }

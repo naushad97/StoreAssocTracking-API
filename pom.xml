@@ -8,8 +8,8 @@
 		<version>2.1.8.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.store.tracker</groupId>
-	<artifactId>service-api</artifactId>
+	<groupId>com.store.associate</groupId>
+	<artifactId>tracking</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>service-api</name>
 	<description>Demo project for Store Tracker</description>

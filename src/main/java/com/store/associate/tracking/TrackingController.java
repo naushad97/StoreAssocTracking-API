@@ -1,6 +1,7 @@
-package com.store.tracker.serviceapi;
+package com.store.associate.tracking;
 
-import org.springframework.boot.actuate.trace.http.HttpTrace;
+import com.store.associate.tracking.model.BaseResponse;
+import com.store.associate.tracking.model.BeaconData;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,7 +10,7 @@ import java.util.List;
 
 @CrossOrigin
 @RestController
-public class ServiceApiController {
+public class TrackingController {
 
     private static List<BeaconData> beaconDataList = new ArrayList<>();
 
